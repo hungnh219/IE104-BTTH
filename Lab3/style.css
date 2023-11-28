@@ -1,0 +1,173 @@
+/* General setup */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  min-width: 1000px;
+  max-width: 1400px;
+}
+
+/* Layout */
+
+section {
+  float: left;
+  width: 50%;
+}
+
+aside {
+  float: left;
+  width: 30%;
+}
+
+nav {
+  float: left;
+  width: 20%;
+}
+
+footer {
+  clear: both;
+}
+
+header, section, aside, nav, footer {
+  padding: 20px;
+}
+
+/* header and footer */
+
+header, footer {
+  border-top: 5px solid #a66;
+  border-bottom: 5px solid #a66;
+}
+
+/* WRITE YOUR CODE BELOW HERE */
+/* tạo font chữ phù hợp */
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/roboto/Roboto-Regular.ttf') format('woff'),
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/playfair/PlayfairDisplay-SemiBold.ttf') format('woff'),
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px;
+  word-spacing: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* định dạng văn bản */
+h1 {
+  font-size: 3em;
+  line-height: 1.5;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* thụt lề cho mỗi section */
+section p:first-of-type {
+  text-indent: 20px;
+}
+
+/* đặt khoảng cách cho tiêu đề */
+h1, h2 {
+  letter-spacing: 2px;
+}
+
+/* đặt khoảng cách giữa các từ trong phần body */
+body {
+  word-spacing: 2px;
+}
+
+/* đặt màu sắc cho các trạng thái của liên kết như: link, visited, focus, hover đồng điệu
+với màu sắc của các thanh màu ở đầu và cuối trang. */
+a,
+a:visited,
+a:focus,
+a:hover {
+  color:  #a66;
+}
+
+/* xóa đường gạch chân cho liên kết, nhưng hiển thị lại khi hover hoặc focus */
+a {
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+/* xóa mặc định focus outline cho tất cả các liên kết */
+a:focus {
+    outline: none;
+}
+
+/* chuyển chữ thành màu đỏ + đổ bóng khi người dùng click vào link */
+a:active {
+    color: #ff4500;
+    font-weight: bold;
+    /* font-size: 16px; */
+    text-shadow: 0 0 20px #ff4500;
+}
+
+/* thêm biểu tượng external-link */
+a.external-link {
+    position: relative;
+}
+
+a.external-link::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url('external-link-52.png');
+    background-size: cover;
+    margin-left: 4px;
+}
+
+/* thiết kế thanh nav cho phù hợp */
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-list li:hover {
+  background-color: #a66;
+}
+
+.nav-list li:hover a {
+  color: #fff;
+}
+
+.nav-button {
+  border: 1px solid #a66;
+  margin: 5px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.nav-button a {
+  text-decoration: none;
+}
+
